@@ -56,7 +56,7 @@ def train_valid_datasets_provider(args, tokenizer, pattern_text=False):
 
 
 def metrics_func_provider(args, tokenizer, is_test):
-    """Privde metrics callback function."""
+    """Provide metrics callback function."""
 
     def single_dataset_provider(split):
         return SuperGlueDataset(args, args.task.lower(), args.data_dir, args.seq_length, split, tokenizer)
